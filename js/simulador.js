@@ -24,29 +24,10 @@ if(seleccionAccion === "a"){
     }else if (metodoValuar === "c"){
         for (i = 1; i <= numRepet; i++ ){
             let gastosMateriales = parseFloat(prompt("ingresa el total de lo gastado en materiales para realizar la obra:"));
-            let porcentajeExtra = parseFloat(prompt("ingresa el porcentaje extra que quieres ganar sobre el gasto total de materiales ej(30):"));
             materialesMasPorcentaje(gastosMateriales, porcentajeExtra);
+            let porcentajeExtra = parseFloat(prompt("ingresa el porcentaje extra que quieres ganar sobre el gasto total de materiales ej(30):"));
         }
     }
-
-    function valuarArea (pesos, lado1, lado2){
-            let areaResultado = lado1 * lado2;
-            let valorArea =((areaResultado * pesos) / area).toFixed(2);
-            alert("El valor de la obra según el área de la misma, es de " + valorArea + " pesos.");
-    }
-
-    function horaTrabajo (precioHora, horasTrabajadas){
-        let valorHoras =( precioHora * horasTrabajadas).toFixed(2);
-        alert("El valor de la obra teniendo en cuenta las horas trabajadas es de " + valorHoras + " pesos.");
-    }
-
-    function materialesMasPorcentaje(totalMaterial, extraPorCiento){
-        let totalPorcentaje = (totalMaterial * extraPorCiento) / 100;
-        let valorFinalPorcentaje = (totalMaterial + totalPorcentaje).toFixed(2);
-        alert("El valor de la obra con el porcentaje sumado es de " + valorFinalPorcentaje + " pesos");
-    }
-
-
 }else if (seleccionAccion === "b"){
     alert("Ahora elige que deseas realizar, recuerda que cuando las obras se pagan en efectivo suelen tener un pequeño descuento, y si se venden en cuotas pueden agregarse intereses");
     let descInte= prompt("Puedes -(a)Calcular un descuento o -(b)Agregar intereses para vender en cuotas").toLowerCase();
@@ -67,6 +48,7 @@ if(seleccionAccion === "a"){
             interesExtra (pObra, interes, cuotas)
         }
     }
+}
 
 function descuento(precioObra, valorDesc){
     let descSobreObra = (precioObra * valorDesc) / 100;
@@ -80,4 +62,22 @@ function interesExtra(valorObra, porcExtra, cantCuotas){
     let precioCuotaIndividual = (valorFinal / cantCuotas).toFixed(2);
     alert("el precio de cada cuota es de " + precioCuotaIndividual + " pesos.");
 }
+
+function valuarArea (pesos, lado1, lado2){
+    let areaResultado = lado1 * lado2;
+    let valorArea =((areaResultado * pesos) / area).toFixed(2);
+    alert("El valor de la obra según el área de la misma, es de " + valorArea + " pesos.");
 }
+
+function horaTrabajo (precioHora, horasTrabajadas){
+let valorHoras =( precioHora * horasTrabajadas).toFixed(2);
+alert("El valor de la obra teniendo en cuenta las horas trabajadas es de " + valorHoras + " pesos.");
+}
+
+function materialesMasPorcentaje(totalMaterial, extraPorCiento){
+let totalPorcentaje = (totalMaterial * extraPorCiento) / 100;
+let valorFinalPorcentaje = (totalMaterial + totalPorcentaje).toFixed(2);
+alert("El valor de la obra con el porcentaje sumado es de " + valorFinalPorcentaje + " pesos");
+}
+
+

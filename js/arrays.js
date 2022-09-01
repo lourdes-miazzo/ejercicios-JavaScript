@@ -1,7 +1,7 @@
 const areaReferencia = 10000
 const volumenReferencia = 1000000
-const arrayObras2d= []
-const arrayObras3d= []
+const arrayValorObras2d= []
+const arrayValorObras3d= []
 
 class Obras2d{ 
     constructor(titulo, anio, alto, ancho, areaReferencia, precioArea, materiales, conservacion, seleccion){
@@ -47,8 +47,8 @@ class Obras2d{
         let precioSimple2d = (this.precioArea * areaObra)/ areaReferencia
         let precioFinal2d = ((precioSimple2d * this.materiales) * (this.conservacion * this.seleccion)).toFixed(2)
         alert(`El precio final de la obra es de ${precioFinal2d} pesos`)
-        arrayObras2d.push(precioFinal2d)
-        console.table(arrayObras2d)
+        arrayValorObras2d.push(precioFinal2d)
+        console.table(arrayValorObras2d)
     }
 }
 
@@ -88,20 +88,20 @@ class Obras3d{
         let precioSimple3d = (volObra * this.precioVolumen) / volumenReferencia
         let precioFinal3d = ((precioSimple3d * this.conservacion) * this.seleccion).toFixed(2)
         alert(`El precio final de la obra es de ${precioFinal3d} pesos`)
-        arrayObras3d.push(precioFinal3d)
-        console.table(arrayObras3d)
+        arrayValorObras3d.push(precioFinal3d)
+        console.table(arrayValorObras3d)
     }
 }   
 
 let definirObra = prompt("Bienvenido, elige primero que tipo de obra quieres valuar -(a)pinturas y dibujos 2d. o -(b)esculturas 3d.").toLowerCase()
 
 if(definirObra === "a"){
-    let cantVueltas = parseInt(prompt("ingresa la cantidad deobras que quieres valuar"))
+    let cantVueltas = parseInt(prompt("ingresa la cantidad de obras que quieres valuar"))
     for(let i = 1; i <= cantVueltas; i++){
         objObra2d()
     }
 }else if (definirObra === "b"){
-    let cantVueltas = parseInt(prompt("ingresa la cantidad deobras que quieres valuar"))
+    let cantVueltas = parseInt(prompt("ingresa la cantidad de obras que quieres valuar"))
     for(let i = 1; i <= cantVueltas; i++){
         objObra3d()
     }    

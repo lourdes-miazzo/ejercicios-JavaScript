@@ -9,6 +9,99 @@
     <script src="js/arrays.js"></script>
 </head>
 <body>
-    <h1>Sigue las instrucciones para poder valorar tus obras de la manera que mas te guste</h1>
+    <h1>Guía para valuar tus trabajos artísticos</h1>
+    <p>El mundo del arte puede ser un campo muy difícil de entender, con esta pequeña guía pretendemos brindarte algunos conceptos que te ayudarán a valorar tus obras de manera adecuada.</p>
+    <br>
+    <p>Qué tipo de obra es?</p>
+    <form action="">
+        <label for="definirObra"></label>
+            <select name="definirObra" id="">
+                <option value="">Elige tipo de obra</option>
+                <option value="">2d</option>
+                <option value="">3d</option>
+        </select>
+    <input type="submit" value="Enviar">
+ 
+    <br>
+    <p>Cómo lo quieres valuar?</p>
+        <label for="valuar"></label>
+            <select name="valuarObra" id="">
+                <option value="">Elige forma de valuar</option>
+                <option value="">Por área/volumen ocupada/o</option>
+                <option value="">Por horas trabajadas</option>
+        </select>
+    <input type="submit" value="Enviar">
+    <br>
+    <br>
+    <p>Por área</p>
+    <br>
+    <input type="text" required placeholder="título de la obra">
+    <br>
+    <input type="text" required placeholder="año de ejecución">
+    <br>
+    <input type="text" required placeholder="técnica">
+    <br>
+    <input type="text" required placeholder="alto">
+    <br>
+    <input type="text" required placeholder="ancho">
+    <br>
+    <input type="text" required placeholder="precio de obra con área 100 por 100cms">
+    <br>
+    <label for="materiales"></label>
+            <select name="materiales" id="">
+                <option value="">Elige tipo de materiales</option>
+                <option value="">Óleo</option>
+                <option value="">Otros</option>
+            </select>
+            <br>
+            <label for="conservacion"></label>
+            <select name="conservacion" id="">
+                <option value="">Es posible conservar fácilmente la obra</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <br>
+            <label for="Seleccion"></label>
+            <select name="Seleccion" id="">
+                <option value="">Selección en Concurso</option>
+                <option value="">Salón Internacional</option>
+                <option value="">Salón Nacional</option>
+                <option value="">Salón Provincial</option>
+                <option value="">No fue seleccionada</option>
+            </select>
+    <br>
+    <input type="submit" value="Enviar">
+    <br>
+    <p>Por hora de trabajo</p>
+    <br>
+    <input type="text" required placeholder="título de la obra">
+    <br>
+    <input type="text" required placeholder="año de ejecución">
+    <br>
+    <input type="text" required placeholder="técnica">
+    <br>
+    <input type="text" required placeholder="valor de hora de trabajo">
+    <br>
+    <input type="text" required placeholder="horas trabajadas para realizar obra">
+    <br>
+    <label for="materiales"></label>
+            <label for="conservacion"></label>
+            <select name="conservacion" id="">
+                <option value="">Es posible conservar fácilmente la obra</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <br>
+            <label for="Seleccion"></label>
+            <select name="Seleccion" id="">
+                <option value="">Selección en Concurso</option>
+                <option value="">Salón Internacional</option>
+                <option value="">Salón Nacional</option>
+                <option value="">Salón Provincial</option>
+                <option value="">No fue seleccionada</option>
+            </select>
+            <br>
+            <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>

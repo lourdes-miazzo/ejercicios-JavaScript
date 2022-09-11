@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Valorador de obras</title>
     <script src="js/arrays.js"></script>
+    <script defer src="js/usandoDom.js"></script>
+   
 </head>
 <body>
-    <h1>Guía para valuar tus trabajos artísticos</h1>
-    <p>El mundo del arte puede ser un campo muy difícil de entender, con esta pequeña guía pretendemos brindarte algunos conceptos que te ayudarán a valorar tus obras de manera adecuada.</p>
+    <div class="titulo">
+
+    </div>
+    <p id="principal">El mundo del arte puede ser un campo muy difícil de entender, con esta pequeña guía pretendemos brindarte algunos conceptos que te ayudarán a valorar tus obras de manera adecuada.</p>
     <br>
-    <p>Qué tipo de obra es?</p>
+    <p class="incognita">Qué tipo de obra es?</p>
     <form action="">
         <label for="definirObra"></label>
             <select name="definirObra" id="">
@@ -20,32 +24,31 @@
                 <option value="">2d</option>
                 <option value="">3d</option>
         </select>
-    <input type="submit" value="Enviar">
- 
+    <button type="submit">Enviar</button>
     <br>
-    <p>Cómo lo quieres valuar?</p>
+    <p class="incognita">Cómo lo quieres valuar?</p>
         <label for="valuar"></label>
             <select name="valuarObra" id="">
                 <option value="">Elige forma de valuar</option>
                 <option value="">Por área/volumen ocupada/o</option>
                 <option value="">Por horas trabajadas</option>
         </select>
-    <input type="submit" value="Enviar">
+    <button type="submit">Enviar</button>
     <br>
     <br>
     <p>Por área</p>
     <br>
     <input type="text" required placeholder="título de la obra">
     <br>
-    <input type="text" required placeholder="año de ejecución">
+    <input type="number" required placeholder="año de ejecución">
     <br>
     <input type="text" required placeholder="técnica">
     <br>
-    <input type="text" required placeholder="alto">
+    <input type="number" required placeholder="alto">
     <br>
-    <input type="text" required placeholder="ancho">
+    <input type="number" required placeholder="ancho">
     <br>
-    <input type="text" required placeholder="precio de obra con área 100 por 100cms">
+    <input type="number" required placeholder="precio de obra con área 100 por 100cms">
     <br>
     <label for="materiales"></label>
             <select name="materiales" id="">
@@ -70,19 +73,19 @@
                 <option value="">No fue seleccionada</option>
             </select>
     <br>
-    <input type="submit" value="Enviar">
+    <button type="submit">Enviar</button>
     <br>
     <p>Por hora de trabajo</p>
     <br>
     <input type="text" required placeholder="título de la obra">
     <br>
-    <input type="text" required placeholder="año de ejecución">
+    <input type="number" required placeholder="año de ejecución">
     <br>
     <input type="text" required placeholder="técnica">
     <br>
-    <input type="text" required placeholder="valor de hora de trabajo">
+    <input type="number" required placeholder="valor de hora de trabajo">
     <br>
-    <input type="text" required placeholder="horas trabajadas para realizar obra">
+    <input type="number" required placeholder="horas trabajadas para realizar obra">
     <br>
     <label for="materiales"></label>
             <label for="conservacion"></label>
@@ -101,7 +104,21 @@
                 <option value="">No fue seleccionada</option>
             </select>
             <br>
-            <input type="submit" value="Enviar">
+            <button type="submit">Enviar</button>
     </form>
+    <section>
+    <h2 class="infoObra">Información de la obra</h2>
+        <ul class="informDeObras">
+            
+        </ul>
+    <h2>Información descuentos</h2>
+    <ul class="informDesc">
+
+    </ul>
+    <h2>Información intereses</h2>
+    <ul class="informInteres">
+
+    </ul>
+    </section>
 </body>
 </html>

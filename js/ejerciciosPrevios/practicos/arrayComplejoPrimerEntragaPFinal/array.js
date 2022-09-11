@@ -10,6 +10,8 @@ let desc20 = 0.8
 const cuotas3 = 1.0406
 const cuotas6 = 1.0781
 const cuotas12 = 1.1473
+
+
 debugger
 
 //clases
@@ -266,6 +268,7 @@ if(definirObra === "a"){
         }
     }else if (mediosPago === false)
         alert("Gracias por utilizar nuestro valuador de obras!")
+
 }
 
 function objObra2d(){
@@ -374,4 +377,5 @@ function interes(){
                                     precio12Cuotas: (interes.precio * cuotas12).toFixed(2)
                                 }
     })
-}
+} 
+

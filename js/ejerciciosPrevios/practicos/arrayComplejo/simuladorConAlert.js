@@ -32,11 +32,18 @@ class Obras{
         this.conservacion = conservacion
         this.seleccion = seleccion
     }
+    tipoDeObra(){
+        if(this.tipo === "a"){
+            this.tipo = "2d"
+        }else if(this.tipo === "b"){
+            this.tipo = "3d"
+        }
+    }
     conservacionTiempo(){
-        if(this.conservacion === "a"){
+        if(this.conservacion === true){
             this.conservacion = 1.03
         }
-        else if (this.conservacion === "b"){
+        else{
             this.conservacion = 0.8
         }
     }
@@ -54,24 +61,24 @@ class Obras{
 } 
 
 
-//let empezarProceso = confirm("Bienvenido, quieres comenzar a valuar tus obras? dale Aceptar y completa el formulario")
+let empezarProceso = confirm("Bienvenido, quieres comenzar a valuar tus obras?")
 
-
-//if(empezarProceso  == true){
+if(empezarProceso  == true){
 //valuar
-        //armar ObJETO
-    
-
-     
-        
-       if(infoObra[i].opcionCalculo === "a" && infoObra[i].tipo === "2d"){
+    do{
+        objObra()
+        if(infoObra[i].opcionCalculo === "a" && infoObra[i].tipo === "2d"){
             calcPrecioArea()
         }else if(infoObra[i].opcionCalculo === "a" && infoObra[i].tipo === "3d"){
             calcPrecioVolumen()
         }else if(infoObra[i].opcionCalculo === "b" && (infoObra[i].tipo === "2d" || infoObra[i].tipo === "3d")){
             calcPrecioHoras()
         } 
+        i++
         procesarInfoUsuario()
+        console.table(infoUsuario)
+        confirmar = confirm("Quieres valuar una obra más?")
+    } while (confirmar === true)
 //medios de pago 
     let mediosPago = confirm("Quieres calcular las formas de pago que pueden tener estas obras?")
     if (mediosPago === true){
@@ -88,37 +95,35 @@ class Obras{
     }else if (mediosPago === false)
         alert("Gracias por utilizar nuestro valuador de obras!") 
         crearListaInfo(infoUsuario)
-        console.table(infoUsuario)
-//}else if(empezarProceso === false){
-    //alert("Bueno, la próxima vez será!") 
-//}
+}else if(empezarProceso === false){
+    alert("Bueno, la próxima vez será!") 
+}
 
- 
 function objObra(){
-    tipo
-    opcionCalculo
-    let titulo = document.querySelector("#titulo").value
-    let anio = document.querySelector("#anio").value
-    let tecnica = document.querySelector("#tecnica").value
-    let alto = document.querySelector("#alto").value
-    let ancho = document.querySelector("#ancho").value
-    let profundidad = document.querySelector("#profundidad").value
-    let precioArea = document.querySelector("#precioArea").value
-    let precioVolumen = document.querySelector("#precioVolumen").value
-    let horaReferencia = document.querySelector("#horaReferencia").value
-    let horasTrabajadas = document.querySelector("#horasTrabajadas").value
-    conservacion
-    seleccion
+    let tipo = prompt("Qué tipo de obra es? -(a)pinturas y dibujos 2d. o -(b)esculturas 3d.").toLowerCase()
+    let opcionCalculo = prompt("Cómo quieres valuar tu obra? -(a)por area/volumen ocupado. o -(b)por horas trabajadas.").toLowerCase()
+    let titulo = prompt("Cúal es el título de la obra?")
+    let anio = prompt("En qué año fue realizada?")
+    let tecnica =prompt("Qué técnica se utilizo para realizarla?")
+    let alto = parseFloat(prompt(" Cúanto mide en centimetros uno de sus lados? En caso de que hayas elegido valuar por HORA acepta sin llenar el campo."))
+    let ancho = parseFloat(prompt(" Cúanto mide en centimetros el otro de sus lados? En caso de que hayas elegido valuar por HORA acepta sin llenar el campo."))
+    let profundidad =parseFloat(prompt("Cúanto mide en centimetros el espesor? En caso de que hayas elegido valuar por ÁREA U HORA acepta sin llenar el campo."))
+    let precioArea = parseFloat(prompt("Ingresa el precio en pesos del área de una de tus obras de 100 por 100cms (10000cms2). En caso de que hayas elegido valuar por VOLUMEN U HORA acepta sin llenar el campo."))
+    let precioVolumen = parseFloat(prompt("Ingresa el precio en pesos del volumen de una de tus obras de 100 por 100 por 100 cms (1000000 cms3).En caso de que hayas elegido valuar por ÁREA U HORA acepta sin llenar el campo."))
+    let horaReferencia = parseFloat(prompt("Ingresa cuanto es el valor de tu hora de trabajo. En caso de que hayas elegido valuar por ÁREA O VOLUMEN acepta sin llenar el campo. "))
+    let horasTrabajadas = parseFloat(prompt(" Ingresa la cantidad de horas trabajadas para realizar la obra en su totalidad. En caso de que hayas elegido valuar por ÁREA O VOLUMEN acepta sin llenar el campo."))
+    let conservacion = confirm("La obra está realizada en materiales que posibilitan una conservación en el tiempo? -(Aceptar)Si  -(Cancelar)No")
+    let seleccion = prompt("La obra quedó seleccionada en algún Salón o Concurso? Elige -(a)Salón internacional  -(b)Salón nacional  -(c)Salon provincial  -(d)No fue seleccionada").toLowerCase()
     const plantillaObra = new Obras(tipo, opcionCalculo, titulo, anio, tecnica, alto, ancho, profundidad, areaReferencia, volumenReferencia, precioArea, precioVolumen, horaReferencia, horasTrabajadas, conservacion, seleccion)
     plantillaObra.conservacionTiempo()
     plantillaObra.seleccionConcurso()
+    plantillaObra.tipoDeObra()
     infoObra.push(plantillaObra)
 }
 
-
 function calcPrecioArea() {
     let areaObra =  infoObra[i].alto * infoObra[i].ancho
-    let precioSimple2d = (infoObra[i].precioArea * areaObra)/ areaReferencia
+    let precioSimple2d = (infoObra[0].precioArea * areaObra)/ areaReferencia
     let precioFinal2d = ((precioSimple2d) * (infoObra[i].conservacion * infoObra[i].seleccion)).toFixed(2)
     alert(`El precio final de la obra es de ${precioFinal2d} pesos`)
     infoObra[i].precio = precioFinal2d
@@ -174,3 +179,4 @@ function interes(){
                                 }
     })
 } 
+

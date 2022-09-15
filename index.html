@@ -6,103 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Valorador de obras</title>
-    <script src="js/simuladorValuarObras.js"></script>
-    <script defer src="js/usandoDom.js"></script>
    
 </head>
 <body>
     <div class="contenedorTit"></div>
     <br>
-    <p>Qué tipo de obra es?</p>
-    <form action="">
+    <div class="fondoForm">
+    <form action=""">
+        <p>Qué tipo de obra es?</p>
         <label for="definirObra"></label>
-            <select name="definirObra" id="">
+            <select id="tipoElegido" >
                 <option value="">Elige tipo de obra</option>
-                <option value="">2d</option>
-                <option value="">3d</option>
+                <option value="2d">2d</option>
+                <option value="3d">3d</option>
         </select>
-    <button type="submit">Enviar</button>
     <br>
     <p>Cómo lo quieres valuar?</p>
         <label for="valuar"></label>
-            <select name="valuarObra" id="">
+            <select id="accionElegida">
                 <option value="">Elige forma de valuar</option>
-                <option value="">Por área/volumen ocupada/o</option>
-                <option value="">Por horas trabajadas</option>
+                <option value="a">Por área/volumen ocupada/o</option>
+                <option value="b">Por horas trabajadas</option>
         </select>
-    <button type="submit">Enviar</button>
+    <!-- <div id="crearForm"></div>   --> 
+    <input type="text" placeholder="  título de la obra" id="titulo">
+    <br>
+    <input type="number"  placeholder="  año de ejecución" id="anio">
+    <br>
+    <input type="text" placeholder="  técnica" id="tecnica">
+    <br>
+    <input type="number"  placeholder="  alto" id="alto">
+    <br>
+    <input type="number"  placeholder="  ancho" id="ancho">
+    <br>
+    <input type="number"  placeholder="  profundidad" id="profundidad">
+    <br>
+    <input type="number" placeholder="  precio de obra con área 100 por 100cms" id="precioArea">
+    <br>
+    <input type="number" placeholder="  precio de obra con volumen 100 por 100 por 100cms" id="precioVolumen">
+    <br>
+    <input type="number"   placeholder="  valor de hora de trabajo"  id="horaReferencia">
+    <br>
+    <input type="number" placeholder="  horas trabajadas para realizar obra"  id="horasTrabajadas">
     <br>
     <br>
-    <p class="parraf">Por área</p>
+    <label for="conservacion"></label>
+    <select id="conservacion">
+        <option value="">Es posible conservar fácilmente la obra?</option>
+        <option value="a">Si</option>
+        <option value="b">No</option>
+    </select>
     <br>
-    <input type="text" required placeholder="título de la obra">
-    <br>
-    <input type="number" required placeholder="año de ejecución">
-    <br>
-    <input type="text" required placeholder="técnica">
-    <br>
-    <input type="number" required placeholder="alto">
-    <br>
-    <input type="number" required placeholder="ancho">
-    <br>
-    <input type="number" required placeholder="precio de obra con área 100 por 100cms">
-    <br>
-    <label for="materiales"></label>
-            <select name="materiales" id="">
-                <option value="">Elige tipo de materiales</option>
-                <option value="">Óleo</option>
-                <option value="">Otros</option>
-            </select>
-            <br>
-            <label for="conservacion"></label>
-            <select name="conservacion" id="">
-                <option value="">Es posible conservar fácilmente la obra</option>
-                <option value="">Si</option>
-                <option value="">No</option>
-            </select>
-            <br>
-            <label for="Seleccion"></label>
-            <select name="Seleccion" id="">
-                <option value="">Selección en Concurso</option>
-                <option value="">Salón Internacional</option>
-                <option value="">Salón Nacional</option>
-                <option value="">Salón Provincial</option>
-                <option value="">No fue seleccionada</option>
-            </select>
-    <br>
-    <button type="submit">Enviar</button>
-    <br>
-    <p class="parraf">Por hora de trabajo</p>
-    <br>
-    <input type="text" required placeholder="título de la obra">
-    <br>
-    <input type="number" required placeholder="año de ejecución">
-    <br>
-    <input type="text" required placeholder="técnica">
-    <br>
-    <input type="number" required placeholder="valor de hora de trabajo">
-    <br>
-    <input type="number" required placeholder="horas trabajadas para realizar obra">
-    <br>
-    <label for="materiales"></label>
-            <label for="conservacion"></label>
-            <select name="conservacion" id="">
-                <option value="">Es posible conservar fácilmente la obra</option>
-                <option value="">Si</option>
-                <option value="">No</option>
-            </select>
-            <br>
-            <label for="Seleccion"></label>
-            <select name="Seleccion" id="">
-                <option value="">Selección en Concurso</option>
-                <option value="">Salón Internacional</option>
-                <option value="">Salón Nacional</option>
-                <option value="">Salón Provincial</option>
-                <option value="">No fue seleccionada</option>
-            </select>
-            <br>
-            <button type="submit">Enviar</button>
+    <label for="Seleccion"></label>
+    <select id="seleccion">
+        <option value="">Selección en Concurso</option>
+        <option value="a">Salón Internacional</option>
+        <option value="b">Salón Nacional</option>
+        <option value="c">Salón Provincial</option>
+        <option value="d">No fue seleccionada</option>
+    </select>
+    <button type="submit">VALUAR</button>
     </form>
+    </div>
     <section>
     <h2 class="infoObra">Información de la obra</h2>
         <ul class="informDeObras">  
@@ -113,6 +78,8 @@
     <h2>Información intereses</h2>
         <ul class="informInteres">
         </ul>
-    </section>
+    </section> 
+    <script src="js/usandoDom.js"></script>
+    <script src="js/simuladorValuarObras.js"></script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Valorador de obras-2d</title>
+    <script defer src="../js/simuladorHoras.js"></script>
+    <script defer src="../js/variables.js"></script>
+</head>
+<body>
+    <br>
+    <div class="fondoForm">
+        <br>
+        <form id="valuarObraHoras">
+            <input type="text" placeholder="  título de la obra" id="titulo">
+            <br>
+            <input type="number"  placeholder="  año de ejecución" id="anio">
+            <br>
+            <input type="text" placeholder="  técnica" id="tecnica">
+            <br>
+            <input type="number"  placeholder="  Precio de la hora de trabajo" id="horaReferencia">
+            <br>
+            <input type="number"  placeholder="  Total de horas trabajadas" id="horasTrabajadas">
+            <br>
+            <label for="conservacion"></label>
+            <select id="conservacion">
+                <option value="">Es posible conservar fácilmente la obra?</option>
+                <option value="1.03">Si</option>
+                <option value="0.97">No</option>
+            </select>
+            <br>
+            <label for="Seleccion"></label>
+            <select id="seleccion">
+                <option value="">Selección en Concurso</option>
+                <option value="1.3">Salón Internacional</option>
+                <option value="1.2">Salón Nacional</option>
+                <option value="1.1">Salón Provincial</option>
+                <option value="1">No fue seleccionada</option>
+            </select>
+            <br>
+            <label for="expo"></label>
+            <select id="expo">
+                <option value="">Exposición de la obra en galerías o museos</option>
+                <option value="1.03">Museo público o privado</option>
+                <option value="1">Galería privada</option>
+                <option value="0.97">No fue expuesta</option>
+            </select>
+            <br>
+            <label for="medios"></label>
+            <select id="medios">
+                <option value="">Repercusión en los medios</option>
+                <option value="1.03">Si</option>
+                <option value="1">No</option>
+            </select>
+            <br>
+            <button type="submit">VALUAR</button>
+        </form>
+        <br>
+    </div>
+</body>
+</html>

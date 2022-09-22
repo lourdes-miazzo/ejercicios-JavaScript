@@ -31,4 +31,4 @@ function capturarDatos(e){
     localStorage.setItem("precio", JSON.stringify(precioFinal3d)) 
     window.location.href="http://127.0.0.1:5500/repoEjercicios/html/mostrarResultado.html"
 }
- 
+

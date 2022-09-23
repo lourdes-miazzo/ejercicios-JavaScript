@@ -29,6 +29,6 @@ function capturarDatos(e){
     localStorage.setItem("anio", JSON.stringify(anio))
     localStorage.setItem("tecnica", JSON.stringify(tecnica))
     localStorage.setItem("precio", JSON.stringify(precioFinal3d)) 
-    window.location.href="http://repoEjercicios/html/mostrarResultado.html"
+    window.location ="mostrarResultado.html"
 }
 

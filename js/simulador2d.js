@@ -2,7 +2,7 @@ const areaReferencia = 10000
 const valuarObra2d = document.querySelector("#valuarObra2d")
 valuarObra2d.addEventListener("submit", capturarDatos)
 
-
+//CAPTURAR LOS VALORES DEL FORMULARIO PARA OBTENER EL PRECIO Y GUARDAR EN LOCAL STORAGE INFO PARA REUTILIZAR EN LA ETAPA DE MOSTRAR AL USUARIO
 function capturarDatos(e){
     e.preventDefault()
     const titulo = document.querySelector("#titulo").value

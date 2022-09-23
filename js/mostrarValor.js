@@ -1,3 +1,4 @@
+//CONSTANTES NECESARIAS PARA OBTENER RESULTADOS Y COMPILAR LA INFORMACION
 const objObra = {}
 const infoObra = [] 
 const desc = 0.9
@@ -5,10 +6,12 @@ const desc20 = 0.8
 const cuotas3 = 1.0406
 const cuotas6 = 1.0781
 const cuotas12 = 1.1473
+// ACCESO AL DOM PARA IMPRIMIR RESULTADOS EN PANTALLA
 const listaInfo = document.querySelector("#informDeObras")    
 const listaDescObras = document.querySelector("#informDesc")
 const listaInteresObras = document.querySelector("#informInteres") 
 
+//OBTENER LOS DATOS EN CADENA DE LOS FORMULARIOS Y TRANSFORMARLOS PARA PROCESARLOS
 obtenerDato()
 function  obtenerDato(){
     titulo = JSON.parse(localStorage.getItem("titulo"))
@@ -23,6 +26,7 @@ function  obtenerDato(){
     compilarFunc()
 }
 
+//FUNCION QUE LLAMA A OTRAS FUNCIONES ÁRA MAPEAR Y OBTENER RESULTADOS DE INFO BÁSICA, DESCUENTOS E INTERESES
 function compilarFunc(){
     procesarInfoUsuario()
     descuento()
@@ -63,6 +67,7 @@ function interes(){
     })
 } 
 
+//FUNCION QUE COMPILA A LAS FUNCIONES QUE MUESTRAN EL RESULTADO AL USUARIO
 function mostrarResultado(){
     crearListaInfo()
     crearListaDesc()
@@ -115,6 +120,7 @@ function crearListaInteres(){
     reset()
 } 
 
+//RESETEO DE CADA FORMULARIO
 function reset(){
     if(document.querySelector("#valuarObra2d")){
         document.querySelector("#valuarObra2d").reset()

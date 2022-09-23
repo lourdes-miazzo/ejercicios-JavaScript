@@ -2,7 +2,7 @@ const volumenReferencia = 1000000
 let valuar3d = document.getElementById("valuarObra3d")
 valuar3d.addEventListener("submit", capturarDatos)
 
-
+//CAPTURAR LOS VALORES DEL FORMULARIO PARA OBTENER EL PRECIO Y GUARDAR EN LOCAL STORAGE INFO PARA REUTILIZAR EN LA ETAPA DE MOSTRAR AL USUARIO
 function capturarDatos(e){
     e.preventDefault()
     const titulo = document.querySelector("#titulo").value
@@ -29,6 +29,6 @@ function capturarDatos(e){
     localStorage.setItem("anio", JSON.stringify(anio))
     localStorage.setItem("tecnica", JSON.stringify(tecnica))
     localStorage.setItem("precio", JSON.stringify(precioFinal3d)) 
-    window.location.href="http://127.0.0.1:5500/repoEjercicios/html/mostrarResultado.html"
+    window.location.href="http://repoEjercicios/html/mostrarResultado.html"
 }
 

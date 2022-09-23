@@ -1,6 +1,7 @@
 let valuarObraHoras = document.querySelector("#valuarObraHoras")
 valuarObraHoras.addEventListener("submit", capturarDatos)
 
+//CAPTURAR LOS VALORES DEL FORMULARIO PARA OBTENER EL PRECIO Y GUARDAR EN LOCAL STORAGE INFO PARA REUTILIZAR EN LA ETAPA DE MOSTRAR AL USUARIO
 function capturarDatos(e){
     e.preventDefault()
     const titulo = document.querySelector("#titulo").value
@@ -16,7 +17,6 @@ function capturarDatos(e){
     const exposicion = fuenteSelectExpo.value
     const fuenteSelectMedios = document.querySelector("#medios")
     const medios = fuenteSelectMedios.value
- 
     const obraHoras =  parseFloat(horaReferencia) * parseFloat(horasTrabajadas)
     const precioFinalHoras = ((obraHoras) * (parseFloat(conservacion) * parseFloat(seleccion)) * (parseFloat(exposicion) * parseFloat(medios)) ).toFixed(2) 
 

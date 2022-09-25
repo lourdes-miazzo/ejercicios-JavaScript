@@ -20,15 +20,16 @@ function capturarDatos(e){
     const exposicion = fuenteSelectExpo.value
     const fuenteSelectMedios = document.querySelector("#medios")
     const medios = fuenteSelectMedios.value
-
+     //REALIZAR CALCULO DE PRECIO
     let volObra = parseFloat(alto) * parseFloat(ancho) * parseFloat(profundidad)
     let precioSimple3d = (volObra * parseFloat(precioVolumen)) / volumenReferencia
     let precioFinal3d = ((precioSimple3d * parseFloat(conservacion)) * parseFloat(seleccion) * (parseFloat(exposicion) * parseFloat(medios))).toFixed(2)
-    
+    //ENVIAR DATA IMPORTANTE A LOCAL STORAGE
     localStorage.setItem("titulo", JSON.stringify(titulo))
     localStorage.setItem("anio", JSON.stringify(anio))
     localStorage.setItem("tecnica", JSON.stringify(tecnica))
     localStorage.setItem("precio", JSON.stringify(precioFinal3d)) 
+    //ABRIR NUEVA PANTALLA PARA MOSTRAR LOS RESULTADOS
     window.location ="mostrarResultado.html"
 }
 

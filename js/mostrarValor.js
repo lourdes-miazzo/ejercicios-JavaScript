@@ -1,4 +1,4 @@
-//CONSTANTES NECESARIAS PARA OBTENER RESULTADOS Y COMPILAR LA INFORMACION
+//CONSTANTES NECESARIAS PARA OBTENER RESULTADOS DE DESC E INTERES Y COMPILAR LA INFORMACION
 const objObra = {}
 const infoObra = [] 
 const desc = 0.9
@@ -26,7 +26,7 @@ function  obtenerDato(){
     compilarFunc()
 }
 
-//FUNCION QUE LLAMA A OTRAS FUNCIONES ÁRA MAPEAR Y OBTENER RESULTADOS DE INFO BÁSICA, DESCUENTOS E INTERESES
+//FUNCION QUE LLAMA A OTRAS FUNCIONES PARA MAPEAR Y OBTENER RESULTADOS DE INFO BÁSICA, DESCUENTOS E INTERESES
 function compilarFunc(){
     procesarInfoUsuario()
     descuento()
@@ -67,11 +67,12 @@ function interes(){
     })
 } 
 
-//FUNCION QUE COMPILA A LAS FUNCIONES QUE MUESTRAN EL RESULTADO AL USUARIO
+//FUNCION QUE COMPILA A LAS FUNCIONES QUE MUESTRAN EL RESULTADO AL USUARIO Y RESETEA LOS FORMULARIOS
 function mostrarResultado(){
     crearListaInfo()
     crearListaDesc()
     crearListaInteres()
+    reset()
 }
 
 function crearListaInfo(){ 
@@ -117,7 +118,6 @@ function crearListaInteres(){
                 <br>`
         listaInteresObras.innerHTML += listaInt
     })
-    reset()
 } 
 
 //RESETEO DE CADA FORMULARIO

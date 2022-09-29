@@ -19,9 +19,9 @@ function capturarDatos(e){
     const seleccion = fuenteSelectSalon.value
     const fuenteSelectExpo = document.querySelector("#expo")
     const exposicion = fuenteSelectExpo.value
-    const fuenteSelectMedios = document.querySelector("#medios")
+    const fuenteSelectMedios = document.querySelector("#medios") 
     const medios = fuenteSelectMedios.value
-    //REALIZAR CALCULO DE PRECIO
+     //REALIZAR CALCULO DE PRECIO
     const areaObra =  parseFloat(alto) * parseFloat(ancho)
     let precioSimple2d = (parseFloat(precioArea) * parseFloat(areaObra))/ areaReferencia
     const precioFinal2d = ((precioSimple2d * parseFloat(materiales)) * (parseFloat(conservacion) * parseFloat(seleccion)) * (parseFloat(exposicion) * parseFloat(medios))).toFixed(2) 
@@ -32,5 +32,7 @@ function capturarDatos(e){
     localStorage.setItem("precio", JSON.stringify(precioFinal2d))
     //ABRIR NUEVA PANTALLA PARA MOSTRAR LOS RESULTADOS
     window.location="mostrarResultado.html"
-    }
+    //ELIMINAR INFO DEL FORMULARIO POR SI EL USUARIO VUELVE HACIA ATRÁS
+    valuarObra2d.reset()
+}
 

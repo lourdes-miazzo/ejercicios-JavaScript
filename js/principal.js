@@ -17,13 +17,7 @@ function elegirForm(e){
 
 //SEGÚN LAS OPCIONES ELEGIDAS SE TOMA LA DECISION DE INGRESAR A UNO U OTRO FORMULARIO
 function redirigirAOpcion(){
-    if (guardarInfo.tipo === "2d" && guardarInfo.opcion === "areaVolumen"){
-        window.location = "html/valuar2d.html"
-    }else if(guardarInfo.tipo === "3d" && guardarInfo.opcion === "areaVolumen"){
-        window.location = "html/valuar3d.html"
-    }else if((guardarInfo.tipo === "2d" || guardarInfo.tipo === "3d") && guardarInfo.opcion === "horasTrab" ){
-        window.location = "html/valuarHoras.html"
-    }
+    (guardarInfo.tipo === "2d" && guardarInfo.opcion === "areaVolumen") ? window.location = "html/valuar2d.html" : (guardarInfo.tipo === "3d" && guardarInfo.opcion === "areaVolumen") ?  window.location = "html/valuar3d.html" :  window.location = "html/valuarHoras.html"
     primerReset()
 }
 

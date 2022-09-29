@@ -11,6 +11,8 @@ const listaInfo = document.querySelector("#informDeObras")
 const listaDescObras = document.querySelector("#informDesc")
 const listaInteresObras = document.querySelector("#informInteres") 
 
+
+
 //OBTENER LOS DATOS EN CADENA DE LOS FORMULARIOS Y TRANSFORMARLOS PARA PROCESARLOS
 obtenerDato()
 function  obtenerDato(){
@@ -67,12 +69,12 @@ function interes(){
     })
 } 
 
-//FUNCION QUE COMPILA A LAS FUNCIONES QUE MUESTRAN EL RESULTADO AL USUARIO Y RESETEA LOS FORMULARIOS
+//FUNCION QUE COMPILA A LAS FUNCIONES QUE MUESTRAN EL RESULTADO AL USUARIO 
 function mostrarResultado(){
     crearListaInfo()
     crearListaDesc()
     crearListaInteres()
-    reset()
+
 }
 
 function crearListaInfo(){ 
@@ -80,10 +82,10 @@ function crearListaInfo(){
     infoUsuario.forEach(elem => {
         lista = `<h2 class="infoObra tituloInfo">Información de la obra</h2>
                     <ul>  
-                        <li class="cuerpoInfo">Titulo de la obra:  ${elem.titulo}</li>
-                        <li class="cuerpoInfo">Año de creación: ${elem.año}</li>
-                        <li class="cuerpoInfo">Técnica: ${elem.tecnica}</li>
-                        <li class="cuerpoInfo">Precio Final: ${elem.precio}</li>
+                        <li class="cuerpoInfo"><span>Titulo de la obra:</span>  ${elem.titulo}</li>
+                        <li class="cuerpoInfo"><span>Año de creación:</span> ${elem.año}</li>
+                        <li class="cuerpoInfo"><span>Técnica:</span> ${elem.tecnica}</li>
+                        <li class="cuerpoInfo"><span>Precio Final:</span> ${elem.precio}</li>
                     </ul>
                 <br>`
     listaInfo.innerHTML += lista
@@ -95,9 +97,9 @@ function crearListaDesc(){
     infoDescuento.forEach(elem => {
         listaDesc = `<h2 class="tituloInfo">Información descuentos</h2>
                         <ul>
-                            <li class="cuerpoInfo">Precio Final: ${elem.precio}</li>
-                            <li class="cuerpoInfo">Precio con 10% de descuento: ${elem.descuento10PorCiento}</li>
-                            <li class="cuerpoInfo">Precio con 20% de descuento: ${elem.descuento20PorCiento}</li>
+                            <li class="cuerpoInfo"><span>Precio Final:</span> ${elem.precio}</li>
+                            <li class="cuerpoInfo"><span>Precio con 10% de descuento:</span> ${elem.descuento10PorCiento}</li>
+                            <li class="cuerpoInfo"><span>Precio con 20% de descuento:</span> ${elem.descuento20PorCiento}</li>
                         </ul>
                     <br>`
     listaDescObras.innerHTML += listaDesc
@@ -110,23 +112,17 @@ function crearListaInteres(){
     infoInteres.forEach(elem => {
         listaInt = `<h2 class="tituloInfo">Información intereses</h2>
                         <ul>
-                            <li class="cuerpoInfo">Precio Final: ${elem.precio}</li>
-                            <li class="cuerpoInfo">Precio total venta en 3 cuotas: ${elem.precio3Cuotas}</li>
-                            <li class="cuerpoInfo">Precio total venta en 6 cuotas: ${elem.precio6cuotas}</li>
-                            <li class="cuerpoInfo">Precio total venta en 12 cuotas: ${elem.precio12Cuotas}</li>
+                            <li class="cuerpoInfo"><span>Precio Final:</span> ${elem.precio}</li>
+                            <li class="cuerpoInfo"><span>Precio total venta en 3 cuotas:</span> ${elem.precio3Cuotas}</li>
+                            <li class="cuerpoInfo"><span>Precio total venta en 6 cuotas:</span> ${elem.precio6cuotas}</li>
+                            <li class="cuerpoInfo"><span>Precio total venta en 12 cuotas:</span> ${elem.precio12Cuotas}</li>
                         </ul>
                 <br>`
         listaInteresObras.innerHTML += listaInt
     })
 } 
 
-//RESETEO DE CADA FORMULARIO
-function reset(){
-    if(document.querySelector("#valuarObra2d")){
-        document.querySelector("#valuarObra2d").reset()
-    }else if(document.querySelector("#valuarObra3d")){
-        document.querySelector("#valuarObra3d").reset()
-    }else if(document.querySelector("#valuarObraHoras")){
-        document.querySelector("#valuarObraHoras").reset()
-    }
-}
+
+
+    
+    

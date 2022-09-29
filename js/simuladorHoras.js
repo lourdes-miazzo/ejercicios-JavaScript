@@ -27,4 +27,6 @@ function capturarDatos(e){
     localStorage.setItem("precio", JSON.stringify(precioFinalHoras))
     //ABRIR NUEVA PANTALLA PARA MOSTRAR LOS RESULTADOS
     window.location = "mostrarResultado.html"
+    //ELIMINAR INFO DEL FORMULARIO POR SI EL USUARIO VUELVE HACIA ATRÁS
+    valuarObraHoras.reset()
 }

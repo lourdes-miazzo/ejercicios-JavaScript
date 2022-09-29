@@ -6,6 +6,7 @@ const desc20 = 0.8
 const cuotas3 = 1.0406
 const cuotas6 = 1.0781
 const cuotas12 = 1.1473
+let esperarTiempo = 3000 //variable para retrasar la aparicion de alert
 // ACCESO AL DOM PARA IMPRIMIR RESULTADOS EN PANTALLA
 const listaInfo = document.querySelector("#informDeObras")    
 const listaDescObras = document.querySelector("#informDesc")
@@ -124,5 +125,20 @@ function crearListaInteres(){
 
 
 
-    
-    
+setTimeout(function(){
+    Swal.fire({
+        position: 'top-end',
+        text: 'Quieres valuar una obra más?',
+        imageUrl:  `../assets/calculadoraSola.jpg`,
+        showConfirmButton: true,
+        showDenyButton: true,
+        confirmButtonColor: "rgb(121, 196, 159) ",
+        denyButtonColor: "rgb(199, 117, 171)",
+        confirmButtonText: 'Si, valuemos una obra más',
+        denyButtonText: `No gracias`,
+        }).then((result) => {
+        if(result.isConfirmed){
+            window.location= "../index.html"
+        } 
+    })
+}, esperarTiempo);

@@ -1,7 +1,8 @@
 const email = document.querySelector("#enviarEmail")
 email.addEventListener("submit", enviarPorEmail)
 
-function enviarPorEmail(){
+function enviarPorEmail(e){
+  e.preventDefault()
   getStorageEmail()
   infoEnviada()
 }
@@ -10,10 +11,10 @@ function enviarPorEmail(){
 const infoEnviada = ()=>{
   Swal.fire({
     position: 'center',
-    imageUrl:  '../assets/mailEnviado.jpg',
+    imageUrl: '../assets/mailEnviado.jpg',
     text: 'La información ha sido enviada a tu mail!',
     showConfirmButton: false,
-    timer: 8000
+    timer: 2500
   })
 }
 

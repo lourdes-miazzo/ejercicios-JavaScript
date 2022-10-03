@@ -146,11 +146,11 @@ setTimeout(function(){
             window.location= "../html/enviarPorEmail.html"
         }else{
             Swal.fire({
-                position: 'top-end',
+                position: 'center',
                 text: 'Gracias por usar nuestro valuador de obras!',
                 imageUrl: `../assets/finValuar.jpg`,
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2500
               })
           }
         })

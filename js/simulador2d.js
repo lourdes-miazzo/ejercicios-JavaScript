@@ -13,18 +13,14 @@ function capturarDatos(e){
     e.preventDefault()
     const datos = obtenerDatos()
     const {titulo, anio, tecnica, alto, ancho, precioArea, materiales, conservacion, seleccion, exposicion, medios} = datos
-    
      //REALIZAR CALCULO DE PRECIO
     const areaObra =  parseFloat(alto) * parseFloat(ancho)
     let precioSimple2d = (parseFloat(precioArea) * parseFloat(areaObra))/ areaReferencia
     const precioFinal2d = ((precioSimple2d * parseFloat(materiales)) * (parseFloat(conservacion) * parseFloat(seleccion)) * (parseFloat(exposicion) * parseFloat(medios))).toFixed(2) 
-
     //ENVIAR DATA IMPORTANTE A LOCAL STORAGE
     setStorage(titulo, anio, tecnica, precioFinal2d)
-    
     //ABRIR NUEVA PANTALLA PARA MOSTRAR LOS RESULTADOS
     window.location="mostrarResultado.html"
-
     //ELIMINAR INFO DEL FORMULARIO POR SI EL USUARIO VUELVE HACIA ATRÁS
     valuarObra2d.reset()
 }

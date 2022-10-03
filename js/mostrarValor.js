@@ -91,6 +91,7 @@ function crearListaInfo(){
                 <br>`
     listaInfo.innerHTML += lista
     })
+
 } 
 
 function crearListaDesc(){ 
@@ -124,21 +125,42 @@ function crearListaInteres(){
 } 
 
 
-
 setTimeout(function(){
     Swal.fire({
         position: 'top-end',
-        text: 'Quieres valuar una obra más?',
+        text: '¿Qué quieres hacer ahora?',
         imageUrl:  `../assets/calculadoraSola.jpg`,
         showConfirmButton: true,
+        showCancelButton: true,
         showDenyButton: true,
-        confirmButtonColor: "rgb(121, 196, 159) ",
-        denyButtonColor: "rgb(199, 117, 171)",
-        confirmButtonText: 'Si, valuemos una obra más',
-        denyButtonText: `No gracias`,
+        confirmButtonColor: "rgb(40, 146, 90)",
+        denyButtonColor: "rgb(13, 212, 106)",
+        cancelButtonColor: "rgb(94, 240, 162)",
+        confirmButtonText: `Valuemos una obra más`,
+        denyButtonText: `Enviar la informacion a mi mail`,
+        cancelButtonText: `No quiero hacer nada más`
         }).then((result) => {
         if(result.isConfirmed){
             window.location= "../index.html"
-        } 
-    })
+        } else if (result.isDenied) {
+            window.location= "../html/enviarPorEmail.html"
+        }else{
+            Swal.fire({
+                position: 'top-end',
+                text: 'Gracias por usar nuestro valuador de obras!',
+                imageUrl: `../assets/finValuar.jpg`,
+                showConfirmButton: false,
+                timer: 1500
+              })
+          }
+        })
 }, esperarTiempo);
+
+
+const setStorageEmail = (infoUsuario, infoDescuento, infoInteres)=>{
+    localStorage.setItem("infoUsuario", JSON.stringify(infoUsuario))
+    localStorage.setItem("infoDescuento", JSON.stringify(infoDescuento))
+    localStorage.setItem("infoInteres", JSON.stringify(infoInteres))
+}
+
+setStorageEmail(infoUsuario, infoDescuento, infoInteres)

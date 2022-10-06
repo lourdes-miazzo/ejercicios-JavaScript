@@ -21,6 +21,7 @@ body {
     width: 100vw;
 }
 
+
 .titulo{
     font-family: Roboto, sans-serif;
     font-weight: 700;
@@ -34,7 +35,7 @@ body {
 
 .contenedorTit{
     background-color:rgba(51, 71, 61,0.9);
-    margin: 1rem;
+    margin-bottom: 1rem;
     margin-left: 15rem;
     margin-right: 15rem;
 }
@@ -46,7 +47,6 @@ body {
     color: rgb(233, 178, 215); 
     margin-left: 8rem;
     margin-right: 8rem;
-    margin-top: 1.rem;
 } 
 form{
     display: flex;
@@ -55,13 +55,29 @@ form{
     justify-content: center;
 }
 
-
 .fondoForm{
     background-color: rgb(27, 34, 31);
     width: 30vw;
     border-radius: 0.8rem;
     box-shadow: 5px 10px 18px rgb(21, 26, 24);
-    align-self: center;
+}
+
+.ordenForm{
+    margin-top: 16rem;
+    margin-bottom: 5rem;
+    padding-top: 1rem;
+}
+
+.ordenForm2{
+    margin-top: 17rem;
+    margin-bottom: 5rem;
+    padding-top: 1rem;
+}
+
+.ordenForm3{
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
 }
 
 .fondoPrincipal{
@@ -75,6 +91,7 @@ input{
     margin-bottom: 0.2rem;
     align-self: center;
     background-color: rgb(140, 153, 147);
+    padding-bottom: 0.3rem;
 }
 
 .focusActivo {
@@ -136,4 +153,19 @@ p{
     list-style: none;
 }
 /* } CIERRE MEDIA QUEERIE NO BORRAR! */
+
+.calcuTamaño{
+    width: 3rem;
+    margin-left: 0.5rem;
+}
+
+nav{
+    background-color: rgba(160, 96, 139, 0.93);
+}
+
+.nav-item{
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    color:  rgb(27, 34, 31);
+}
 

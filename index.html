@@ -4,16 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--  link CSS bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Valuador de obras</title>
     <script defer src="js/principal.js"></script>
 </head>
 <body>
+    <!--  inicia navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="assets/calcuTransp.png" class="calcuTamaño"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                <li class="nav-item">
+                    <a class="nav-link" href="html/artistasUsuarios.html">Nuestros Usuarios-Artistas!</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- fin navbar -->
     <div class="contenedorTit">
     <h1 class="titulo">Guía para valuar tus trabajos artísticos</h1>
     <p class="parrafGral">El mundo del arte puede ser un campo muy difícil de entender, con esta pequeña guía pretendemos brindarte algunos conceptos que te ayudarán a valorar tus obras de manera adecuada.</p>"
     </div>
-    <div class="fondoForm fondoPrincipal">
+    <div class="fondoForm fondoPrincipal ms-auto me-auto">
     <form id="tomarDecision">
         <label for="tipo"></label>
         <select id="tipoObra">
@@ -21,16 +40,18 @@
             <option value="2d"> Obra 2d</option>
             <option value="3d"> Obra 3d</option>
         </select>
-        <br>
         <label for="opcion"></label>
         <select id="formaValuar">
             <option value="">             Elige la forma de valuarla   </option>
             <option value="areaVolumen"> Calcular precio a tráves de área/volumen</option>
             <option value="horasTrab">Calcular precio a tráves de horas trabajadas</option>
         </select>
-        <br>
         <button type="submit">ENVIAR</button>
     </form>
     </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 </html>

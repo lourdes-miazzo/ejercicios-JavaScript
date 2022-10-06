@@ -1,0 +1,51 @@
+[
+    {
+        "imagen": "../assets/artistas/elias.jpg",
+        "nombre": "Jimena Elías",   
+        "instagram": "@munino",
+        "url": "https://www.instagram.com/munino/?hl=en"
+    },
+    {
+        "imagen": "../assets/artistas/giordano.jpg",
+        "nombre": "Daniela Giordano",   
+        "instagram": "@danigior.ceramica",
+        "url": "https://www.instagram.com/danigior.ceramica/"
+    },
+    {
+        "imagen": "../assets/artistas/cossutta.jpg",
+        "nombre": "Florencia Cossutta",   
+        "instagram": "@flocossutta_",
+        "url": "https://www.instagram.com/flocossutta_/"
+    },
+    {
+        "imagen": "../assets/artistas/diMattia.jpg",
+        "nombre": "Marcos Di Mattia",   
+        "instagram": "@marcosdimattia",
+        "url": "https://www.instagram.com/marcosdimattia/?hl=en"
+    },
+    {
+        "imagen": "../assets/artistas/lena.jpg",
+        "nombre": "Santiago Lena",   
+        "instagram": "@santiago_lena",
+        "url": "https://www.instagram.com/santiago_lena/"
+    },
+    {
+        "imagen": "../assets/artistas/miazzo.jpg",
+        "nombre": "Lourdes Miazzo",   
+        "instagram": "@lourdesmiazzo",
+        "url": "https://www.instagram.com/lourdesmiazzo/"
+    },
+    {
+        "imagen": "../assets/artistas/senn.jpg",
+        "nombre": "Andres Senn",   
+        "instagram": "@andrusenn",
+        "url": "https://www.instagram.com/andrusenn/"
+    },
+    
+    {
+        "imagen": "../assets/artistas/coll.jpg",
+        "nombre": "Manuel Coll",   
+        "instagram": "@manuel.coll_",
+        "url": "https://www.instagram.com/manuel.coll_/?hl=en"
+    }
+]

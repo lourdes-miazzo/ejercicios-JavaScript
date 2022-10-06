@@ -87,8 +87,7 @@ function crearListaInfo(){
                         <li class="cuerpoInfo"><span>Año de creación:</span> ${elem.año}</li>
                         <li class="cuerpoInfo"><span>Técnica:</span> ${elem.tecnica}</li>
                         <li class="cuerpoInfo"><span>Precio Final:</span> ${elem.precio}</li>
-                    </ul>
-                <br>`
+                    </ul>`
     listaInfo.innerHTML += lista
     })
 
@@ -102,8 +101,7 @@ function crearListaDesc(){
                             <li class="cuerpoInfo"><span>Precio Final:</span> ${elem.precio}</li>
                             <li class="cuerpoInfo"><span>Precio con 10% de descuento:</span> ${elem.descuento10PorCiento}</li>
                             <li class="cuerpoInfo"><span>Precio con 20% de descuento:</span> ${elem.descuento20PorCiento}</li>
-                        </ul>
-                    <br>`
+                        </ul>`
     listaDescObras.innerHTML += listaDesc
     })
 
@@ -118,8 +116,7 @@ function crearListaInteres(){
                             <li class="cuerpoInfo"><span>Precio total venta en 3 cuotas:</span> ${elem.precio3Cuotas}</li>
                             <li class="cuerpoInfo"><span>Precio total venta en 6 cuotas:</span> ${elem.precio6cuotas}</li>
                             <li class="cuerpoInfo"><span>Precio total venta en 12 cuotas:</span> ${elem.precio12Cuotas}</li>
-                        </ul>
-                <br>`
+                        </ul>`
         listaInteresObras.innerHTML += listaInt
     })
 } 

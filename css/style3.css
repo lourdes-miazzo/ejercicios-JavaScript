@@ -71,3 +71,19 @@ button{
     border-color: rgb(160, 96, 139);
     align-self: center;
 }
+
+.calcuTamaño{
+    width: 3rem;
+    margin-left: 0.5rem;
+}
+
+nav{
+    background-color: rgba(160, 96, 139, 0.93);
+
+}
+
+.nav-item{
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    color:  rgb(27, 34, 31);
+}

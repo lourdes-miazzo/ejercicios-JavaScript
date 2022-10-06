@@ -15,13 +15,10 @@ function capturarDatos(e){
     let volObra = parseFloat(alto) * parseFloat(ancho) * parseFloat(profundidad)
     let precioSimple3d = (volObra * parseFloat(precioVolumen)) / volumenReferencia
     let precioFinal3d = ((precioSimple3d * parseFloat(conservacion)) * parseFloat(seleccion) * (parseFloat(exposicion) * parseFloat(medios))).toFixed(2)
-
     //ENVIAR DATA IMPORTANTE A LOCAL STORAGE
     setStorage(titulo, anio, tecnica, precioFinal3d)
-
     //ABRIR NUEVA PANTALLA PARA MOSTRAR LOS RESULTADOS
     window.location ="mostrarResultado.html"
-
     //ELIMINAR INFO DEL FORMULARIO POR SI EL USUARIO VUELVE HACIA ATRÁS
     valuarObra3d.reset()
 }

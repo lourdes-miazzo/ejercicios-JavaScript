@@ -1,13 +1,15 @@
+//CONEXION CON DOM
 const email = document.querySelector("#enviarEmail")
 email.addEventListener("submit", enviarPorEmail)
 
+//FUNCION ACTIVADA AL HACER CLICK EN BOTON ENVIAR
 function enviarPorEmail(e){
   e.preventDefault()
   getStorageEmail()
   infoEnviada()
 }
 
-
+//USO DE SWEET ALERT
 const infoEnviada = ()=>{
   Swal.fire({
     position: 'center',

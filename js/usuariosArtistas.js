@@ -3,6 +3,7 @@ const URL = "../JSON/artistas.json"
 let artistas = []
 let escribirHTML = ""
 
+//CARGAR USUARIOS DESDE JSON USANDO FETCH
 const cargarUsuarios = async ()=>{
     try {
         const response = await fetch(URL)
@@ -15,9 +16,12 @@ const cargarUsuarios = async ()=>{
         escribirHTML = cargarError()
     }finally{
         contenedor.innerHTML = escribirHTML
-    }
-
-    
+    }  
 }
 
-cargarUsuarios()
+//USO DE SETTIMEOUT PARA SIMULAR CONEXION CON BACKEND Y PARA VER LA ANIMACION DE CARGA :)
+setTimeout(() => {
+    cargarUsuarios()
+}, 2500);
+
+setTimeout()

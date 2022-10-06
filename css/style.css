@@ -160,7 +160,7 @@ p{
 }
 
 nav{
-    background-color: rgba(160, 96, 139, 0.93);
+    background: linear-gradient(90deg, rgba(160,52,124,0.9) 55%, rgba(107, 36, 83, 0.9)100%);
 }
 
 .nav-item{

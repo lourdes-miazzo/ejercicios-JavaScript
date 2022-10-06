@@ -13,7 +13,6 @@ const listaDescObras = document.querySelector("#informDesc")
 const listaInteresObras = document.querySelector("#informInteres") 
 
 
-
 //OBTENER LOS DATOS EN CADENA DE LOS FORMULARIOS Y TRANSFORMARLOS PARA PROCESARLOS
 obtenerDato()
 function  obtenerDato(){
@@ -121,7 +120,7 @@ function crearListaInteres(){
     })
 } 
 
-
+//USO DE SWEET ALER PARA MOSTRAR OPCIONES
 setTimeout(function(){
     Swal.fire({
         position: 'top-end',
@@ -148,12 +147,12 @@ setTimeout(function(){
                 imageUrl: `../assets/finValuar.jpg`,
                 showConfirmButton: false,
                 timer: 2500
-              })
-          }
-        })
+            })
+        }
+    })
 }, esperarTiempo);
 
-
+//ENVIAR TODA LA INFO A LOCAL STORAGE
 const setStorageEmail = (infoUsuario, infoDescuento, infoInteres)=>{
     localStorage.setItem("infoUsuario", JSON.stringify(infoUsuario))
     localStorage.setItem("infoDescuento", JSON.stringify(infoDescuento))

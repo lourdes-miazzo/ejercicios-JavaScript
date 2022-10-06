@@ -1,8 +1,9 @@
+//PLANTILLAS QUE SE CARGARAN SEGÚN SE LOGRE ACCEDER A TRY O A ERROR DE FETCH
 const cargarError = ()=>{
-    return `<div class="error">
-                <h1>ups! error!</h1>
-                <p>la página que intentas solicitar no ha podido cargarse.</p>
-                <p>intenta nuevamente en unos minutos</p>
+    return ` <div class="error ms-auto me-auto">
+                <h1>Ups! error!</h1>
+                <p>La página que intentas solicitar no ha podido cargarse.</p>
+                <p>Intenta nuevamente en unos minutos.</p>
             </div>`
 }
 

@@ -24,4 +24,3 @@ setTimeout(() => {
     cargarUsuarios()
 }, 2500);
 
-setTimeout()

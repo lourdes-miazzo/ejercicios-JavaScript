@@ -1,5 +1,4 @@
 //CONSTANTES NECESARIAS PARA OBTENER RESULTADOS DE DESC E INTERES Y COMPILAR LA INFORMACION
-const objObra = {}
 const infoObra = [] 
 const desc = 0.9
 const desc20 = 0.8
@@ -16,15 +15,8 @@ const listaInteresObras = document.querySelector("#informInteres")
 //OBTENER LOS DATOS EN CADENA DE LOS FORMULARIOS Y TRANSFORMARLOS PARA PROCESARLOS
 obtenerDato()
 function  obtenerDato(){
-    titulo = JSON.parse(localStorage.getItem("titulo"))
-    anio = JSON.parse(localStorage.getItem("anio"))
-    tecnica = JSON.parse(localStorage.getItem("tecnica"))
-    precio = JSON.parse(localStorage.getItem("precio"))
-    objObra.titulo = titulo
-    objObra.anio = anio
-    objObra.tecnica = tecnica
-    objObra.precio = precio
-    infoObra.push(objObra)
+    let datosDeObra = JSON.parse(localStorage.getItem("objObra"))
+    infoObra.push(datosDeObra)
     compilarFunc()
 }
 
@@ -138,6 +130,7 @@ setTimeout(function(){
         }).then((result) => {
         if(result.isConfirmed){
             window.location= "../index.html"
+            localStorage.clear()
         } else if (result.isDenied) {
             window.location= "../html/enviarPorEmail.html"
         }else{
@@ -148,6 +141,7 @@ setTimeout(function(){
                 showConfirmButton: false,
                 timer: 2500
             })
+        localStorage.clear()
         }
     })
 }, esperarTiempo);

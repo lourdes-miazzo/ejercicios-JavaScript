@@ -7,6 +7,7 @@ function enviarPorEmail(e){
   e.preventDefault()
   getStorageEmail()
   infoEnviada()
+  localStorage.clear()
 }
 
 //USO DE SWEET ALERT

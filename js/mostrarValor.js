@@ -72,7 +72,7 @@ function mostrarResultado(){
 function crearListaInfo(){ 
     let lista = ""
     infoUsuario.forEach(elem => {
-        lista = `<h2 class="infoObra tituloInfo">Información de la obra</h2>
+        lista = `<h2 class="tituloInfo">Información de la obra</h2>
                     <ul>  
                         <li class="cuerpoInfo"><span>Titulo de la obra:</span>  ${elem.titulo}</li>
                         <li class="cuerpoInfo"><span>Año de creación:</span> ${elem.año}</li>

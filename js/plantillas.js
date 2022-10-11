@@ -13,7 +13,7 @@ const cargarArtistas = (info)=>{
                 <img class="img" src="${imagen}">
                 <div class="card-body">
                     <h3>${nombre}</h3>
-                    <a target="_blank" href="${url}"><p>${instagram}</p></a>
+                    <a target="_blank" href="${url}"><p class="pCard">${instagram}</p></a>
                 </div>
             </div>`
 }

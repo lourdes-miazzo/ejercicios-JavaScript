@@ -8,7 +8,6 @@ const fuenteSelectExpo = document.querySelector("#expo")
 const fuenteSelectMedios = document.querySelector("#medios") 
 
 
-
 //CAPTURAR LOS VALORES DEL FORMULARIO PARA OBTENER EL PRECIO Y GUARDAR EN LOCAL STORAGE INFO PARA REUTILIZAR EN LA ETAPA DE MOSTRAR AL USUARIO
 function capturarDatos(e){
     e.preventDefault()

@@ -22,5 +22,5 @@ const cargarUsuarios = async ()=>{
 //USO DE SETTIMEOUT PARA SIMULAR CONEXION CON BACKEND Y PARA VER LA ANIMACION DE CARGA :)
 setTimeout(() => {
     cargarUsuarios()
-}, 2500);
+}, 1500);
 

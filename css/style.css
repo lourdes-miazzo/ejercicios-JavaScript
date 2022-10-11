@@ -287,13 +287,13 @@ span{
 .error h1{
     font-size: 2rem;
     font-family: Nunito, sans-serif;
-    color: rgb(30, 43, 37)
+    color: rgba(107, 36, 83, 0.9)
 }
 
 .error p{
     font-size: 1.2rem;
     font-family: Roboto, sans-serif;
-    color:rgb(40, 146, 90); 
+    color:rgb(160,52,124); 
 }
 
 .contenedor{
